@@ -1,0 +1,44 @@
+<section class="about-me px-4 max-w-6xl mx-auto mt-36 mb-20 px-20">
+    <div class="flex flex-wrap-reverse justify-center md:grid grid-cols-2 gap-8">
+      <div class="about-left text-center md:text-left">
+        <h1 class="font-bold text-4xl leading-tight">
+          {{componentName}}
+        </h1>
+        <p class="my-10">
+          {{componentDes}}
+        </p>
+        <a href="" class="bg-red-500 p-3 rounded text-white hover:opacity-80">
+          About Me
+        </a>
+      </div>
+      <div class="about-img flex justify-center md:justify-end items-center">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.YSyGbNls6LOBG_6jG0oMaQHaGd&pid=Api&P=0&w=184&h=160" alt="" class="rounded-full max-h-60 md:max-h-80 my-8 md:m-0" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Featured works -->
+  <h1 class="text-xl font-bold text-red-900 text-center md:text-2xl leading-10 py-4">
+    RECENT POST
+ </h1>
+  <section class="feature-work px-4 max-w-6xl mx-auto mb-20 px-20" *ngFor="let post of postList;">
+    <div class="md:flex py-4 border-b-2 border-inherit">
+      <div class="md:mr-5">
+        <img src="{{post.image}}" alt="" />
+      </div>
+      <div class="content">
+        <h2 class="mt-4 text-2xl font-bold md:mt-0">
+          <a routerLink="work-detail/{{post.id}}"> {{post.name}} </a>
+        </h2>
+        <div class="date-info my-4">
+          <span class="bg-black text-white px-2 rounded-xl mr-6">2022</span>
+          <span class="opacity-70">Dashboard</span>
+        </div>
+        <p>
+         {{post.title}}
+        </p>
+      </div>
+    </div>
+  </section>
+

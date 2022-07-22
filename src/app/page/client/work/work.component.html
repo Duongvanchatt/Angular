@@ -1,0 +1,24 @@
+<section class="max-w-7xl mx-auto px-20">
+    <div class="blog mt-28">
+      <h1 class="md:mb-14 font-bold text-4xl">Work</h1>
+      <div class="md:flex py-10 border-b-2 border-inherit" *ngFor="let post of postList;">
+        <div class="mr-5 ">
+          <img src="{{post.image}}" width="100%" alt="" />
+        </div>
+        <div class="content">
+          <h2 class="mt-4 text-2xl font-bold md:mt-0">
+            {{post.name}}
+          </h2>
+          <div class="date-info my-4">
+            <span class="bg-black text-white px-2 rounded-xl mr-6"
+              >2022</span
+            >
+            <span class="opacity-70">Dashboard</span>
+          </div>
+          <p>
+            {{post.title}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
